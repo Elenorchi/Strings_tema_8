@@ -5,7 +5,7 @@ public class Main {
        последнего вхождения сивола(B). */
     public static void main(String[] args) {
         Remove rem = new Remove();
-        rem.remove(2, 6);
+        rem.remove ( "l", "r");
 
 /* Заменить все вхождения символа стоящего в позиции (3) на символ стоящий в
 позиции 0 */

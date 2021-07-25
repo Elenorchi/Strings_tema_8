@@ -1,11 +1,14 @@
 package com.TMS;
 
+import java.util.ArrayList;
+
 public class Polyndromy {
     String string = "Он зашел в кабак и сделал заказ";
-    int a = 0;
-
+    private int a = 0;
+String b;
     public void polyndrom() {
         String[] words = (string.split(" "));
+        ArrayList<String> ar = new ArrayList<String>();
         for (String word : words) {
             if (word.length() > 2) {
                 for (int i = 0; i < word.length() / 2; i++) {
@@ -14,10 +17,12 @@ public class Polyndromy {
                     }
                 }
                 if (a == word.length()/2) {
-                    System.out.print(word + " ");
+                    ar.add(word);
                     a=0;
                 }
             }
         }
+        String str = String.join(" ", ar);
+        System.out.println (str);
     }
 }
